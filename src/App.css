@@ -1,38 +1,301 @@
-.App {
+
+body {
+  background-color: #e9f7f2; 
+  color: #333;
+  font-family: 'Quicksand', sans-serif; /* Font chữ  */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container chính */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề chính */
+h1 {
   text-align: center;
+  font-size: 36px;
+  color: #32cd32; 
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Nút chuyển chế độ sáng tối */
+button.dark-mode-toggle {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #32cd32; 
+  transition: all 0.3s ease;
+  margin: 20px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button.dark-mode-toggle:hover {
+  color: #228b22; /*  hover */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button.dark-mode-toggle:focus {
+  outline: none;
+}
+
+/* Thanh tìm kiếm */
+input[type="text"], select {
+  padding: 12px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #32cd32; /*  focus */
+  font-size: 16px;
+  background-color: #f1f8f5; 
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus {
+  border-color: #228b22; /*focus */
+  outline: none;
+}
+
+/* Danh sách công việc */
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #e0f7e9; 
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.task-list li.completed {
+  background-color: #c8e6c9; 
+  text-decoration: line-through;
+  color: #a9a9a9;
+}
+
+/* Nút hành động trong danh sách công việc */
+button {
+  background-color: #32cd32; 
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #228b22; /* hover */
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Chế độ tối */
+body.dark-mode {
+  background-color: #2c3e50; /* Nền tối */
+  color: #ecf0f1; /* Màu chữ sáng */
+}
+
+body.dark-mode .container {
+  background-color: #34495e; /* Nền tối */
+}
+
+body.dark-mode .task-list li {
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+body.dark-mode .task-list li.completed {
+  background-color: #7f8c8d; 
+}
+
+body.dark-mode button {
+  background-color: #3498db; 
+}
+
+body.dark-mode button:hover {
+  background-color: #2980b9; 
+}
+
+body.dark-mode .dark-mode-toggle {
+  color: #3498db; 
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  color: #1abc9c; 
+}
+
+/* Nút chuyển chế độ sáng tối */
+.dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  z-index: 1000; /* Đảm bảo nút luôn nằm trên các phần tử khác */
+}
+
+/* Cải tiến giao diện cho các phần tử trong form */
+form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+}
+
+form input,
+form select {
+  margin-bottom: 20px;
+}
+
+.task-list {
+  max-width: 100%;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 15px;
+  background-color: #e0f7e9;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-list li.completed {
+  background-color: #c8e6c9;
+  text-decoration: line-through;
+  color: #a9a9a9;
+}
+
+.task-list li .task-actions button {
+  margin-left: 10px;
+}
+/* Task item container */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.task-content {
+  flex: 1;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Nút sửa, xóa, hoàn thành */
+.task-actions button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.task-actions button:hover {
+  background-color: #45a049;
+}
+
+.task-actions button:active {
+  background-color: #3e8e41;
+}
+
+/* Nút hoàn thành sẽ có màu khác */
+.task-actions button:nth-child(1) {
+  background-color: #ff9800;
+}
+
+.task-actions button:nth-child(1):hover {
+  background-color: #fb8c00;
+}
+
+.task-actions button:nth-child(1):active {
+  background-color: #f57c00;
+}
+
+/* Các task đã hoàn thành */
+.task-item.completed .task-content {
+  text-decoration: line-through;
+  color: #b0b0b0;
+}
+/* Ghi chú hiển thị dưới mỗi công việc */
+.note-display {
+  margin-top: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Chỉnh sửa ghi chú */
+.note-edit {
+  margin-top: 10px;
+}
+
+.note-edit textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.note-edit button {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+}
+
+.note-button {
+  background-color: #9e9e9e;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.note-button:hover {
+  background-color: #8c8c8c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note-button:active {
+  background-color: #757575;
 }

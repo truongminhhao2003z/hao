@@ -1,0 +1,234 @@
+.task-list {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-list h2 {
+    margin-bottom: 10px;
+  }
+  
+  .task-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-list li {
+    background: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-list li:nth-child(odd) {
+    background: #e9ecef;
+  }
+  .task-list li {
+    background: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-list li:nth-child(odd) {
+    background: #e9ecef;
+  }
+  
+  button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ff1a1a;
+  }
+  button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background-color: #ff1a1a;
+  }
+  
+  button.edit {
+    background-color: #28a745;
+  }
+  
+  button.edit:hover {
+    background-color: #218838;
+  }
+  .task-list li {
+    background: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-list li:nth-child(odd) {
+    background: #e9ecef;
+  }
+  
+  .task-list li.completed {
+    background: #d4edda;
+    text-decoration: line-through;
+  }
+  
+  button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background-color: #ff1a1a;
+  }
+  
+  button.edit {
+    background-color: #28a745;
+  }
+  
+  button.edit:hover {
+    background-color: #218838;
+  }
+  
+  .task-list li {
+    background: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-list li:nth-child(odd) {
+    background: #e9ecef;
+  }
+  
+  .task-list li.completed {
+    background: #d4edda;
+    text-decoration: line-through;
+  }
+  
+  button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background-color: #ff1a1a;
+  }
+  
+  button.edit {
+    background-color: #28a745;
+  }
+  
+  button.edit:hover {
+    background-color: #218838;
+  }
+  
+  .check-btn {
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #28a745;
+  }
+  
+  .check-btn:hover {
+    color: #218838;
+  }
+  .task-list li {
+    background: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-list li:nth-child(odd) {
+    background: #e9ecef;
+  }
+  
+  .task-list li.completed {
+    background: #d4edda;
+    text-decoration: line-through;
+  }
+  
+  button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background-color: #ff1a1a;
+  }
+  
+  button.edit {
+    background-color: #28a745;
+  }
+  
+  button.edit:hover {
+    background-color: #218838;
+  }
+  
+  .check-btn {
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #28a745;
+  }
+  
+  .check-btn:hover {
+    color: #218838;
+  }
+  
+  /* Ngày hết hạn */
+  .task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-list li .due-date {
+    font-size: 14px;
+    color: #ff6347; /* Màu cam để nổi bật */
+  }
+  
